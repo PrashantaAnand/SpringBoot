@@ -19,7 +19,7 @@ public class MyController {
 		System.out.println("inside about handler");
 		return "about";
 	}
-	///hello
+	///hellogg
 	@GetMapping("/looping")
 	public String looping(Model model)
 	{
