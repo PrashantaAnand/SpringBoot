@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>condition</title>
+</head>
+<body>
+	<h1>Condition</h1>
+	<h2>user is 
+	 <span th:style="${isactive} ? 'color:red' : 'color:green'" 
+	th:text="${isactive} ? 'ACTIVE' : 'NOT ACTIVE'"></span>
+	</h2>
+	
+	<h1 th:if="${gender}=='M'">Male</h1>
+	<h1 th:unless="${gender}=='M'">Female</h1>
+	
+	<div th:switch="${#lists.size(mylist)}">
+	
+	   <h1 th:case='0'> One element size</h1>
+	   <h1 th:case='1'>two element size</h1>
+	   <h1 th:case='*'>More than two element in the list</h1>
+	
+	</div>
+	
+	
+	
+</body>
+</html>
